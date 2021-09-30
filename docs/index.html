@@ -10,6 +10,7 @@
     />
     <link href="main.css" rel="stylesheet">
     <script src="js/assets-var.js"></script>
+    <script src="js/utils.js"></script>
     <script src="js/clipboard.min.js"></script>
   </head>
   <body>
@@ -27,11 +28,21 @@
             <div class="tip tip-hide" id="tip"></div>
         </div>
     </div>
+    <div class="wx-tip hide" id="wxTip">
+        <span>当前在微信中不能下载,请使用浏览下打开</span>
+    </div>
   </body>
 
   <script>
 document.addEventListener('DOMContentLoaded',function(){
-    console.log('>>>>>>>>>>>>>>3 seconds passed',ninjiaapk);
+
+    var isWxBs = isWx()
+    console.log('>>>>>>>>>>>>>>3 seconds passed',ninjiaapk,isWxBs);
+
+    if(isWxBs){
+        var wxtipEl = document.querySelector('#wxTip')
+        wxtipEl.className ='wx-tip'
+    }
 
     var url = ninjiaapk||'#'
     var apkBtnEl = document.querySelector('#ninjaApk')

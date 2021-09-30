@@ -11,7 +11,7 @@ div.nj-root>div {
 }
 
 .nj-head > h2 {
-    font-size: 68px;
+    font-size: 48px;
 }
 
 .nj-logo-wrap {
@@ -74,6 +74,20 @@ a.btn-download.copy {
     color: red;
 }
 .tip.tip-hide {
+    display: none;
+}
+
+div.wx-tip {
+    position: absolute;
+    top:0;
+    left:0;
+    padding: 4px 12px;
+    text-align: center;
+    width: 100vw;
+    z-index: 999;
+}
+
+div.wx-tip.hide {
     display: none;
 }
 
