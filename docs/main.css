@@ -97,4 +97,8 @@ div.wx-tip.hide {
     .nj-head > h2 {
         font-size: 48px;
     }
+
+    a.btn-download {
+        padding: 6px 6px;
+    }
 }
