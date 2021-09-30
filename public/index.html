@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <title>Ninja App 下载</title>
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1"
+    />
+    <link href="main.css" rel="stylesheet">
+    <script src="js/assets-var.js"></script>
+    <script src="js/clipboard.min.js"></script>
+  </head>
+  <body>
+    <div id="root" class="nj-root">
+        <div class="nj-head">
+            <h2>
+                欢迎使用忍者
+            </h2>
+        </div>
+        <div class="nj-logo-wrap"><img src="assets/images/logo.png" alt="Ninja"></div>
+        <div class="nj-actions">
+            
+            <a  class="btn-download apk" id="ninjaApk" >下载安卓App</a>
+            <a class="btn-download copy" id="cpyBtn" >复制下载连接</a>
+            <div class="tip tip-hide" id="tip"></div>
+        </div>
+    </div>
+  </body>
+
+  <script>
+document.addEventListener('DOMContentLoaded',function(){
+    console.log('>>>>>>>>>>>>>>3 seconds passed',ninjiaapk);
+
+    var url = ninjiaapk||'#'
+    var apkBtnEl = document.querySelector('#ninjaApk')
+    
+    apkBtnEl.setAttribute('href',url)
+
+    
+    var cpyBtnEl =  document.querySelector('#cpyBtn');
+    cpyBtnEl.setAttribute('data-clipboard-text',url);
+
+    var clipboard = new ClipboardJS(cpyBtnEl);
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+        setTip(1,'');
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+        setTip(1,e && e.message ? e.message : '');
+    });
+
+    function setTip(type,msg){
+        var tipEl = document.querySelector('#tip')
+        var className = 'tip tip-success';
+        if(type==1){
+            className = 'tip tip-success';
+            tipEl.className = className;
+            tipEl.innerHTML='复制成功'
+        }else if(type===2){
+            className = 'tip tip-error';
+            tipEl.className = className;
+            tipEl.innerHTML='复制失败'+msg
+        }
+        
+        if(type!==0){
+            var timeout = 3000;
+            if(type===2) timeout = 5000;
+            setTimeout(function(){
+                tipEl.className = 'tip tip-hide'
+                tipEl.innerHTML=''
+            },timeout)
+        }
+
+    }
+});
+  </script>
+</html>

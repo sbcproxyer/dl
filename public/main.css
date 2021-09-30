@@ -1,0 +1,78 @@
+div.nj-root {
+    width: 100%;
+    height: 100vh;
+    display: inline-block;
+    text-align: center;
+}
+
+div.nj-root>div {
+    width: 100%;
+    flex: 1 1 100%;
+}
+
+.nj-head > h2 {
+    font-size: 68px;
+}
+
+.nj-logo-wrap {
+    padding-bottom: 24px;
+}
+
+.nj-logo-wrap > img {
+    width: 200px;
+    height: 200px;
+    border-radius: 8px;
+}
+
+div.nj-actions  {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.nj-actions a {
+    text-decoration: none;
+    margin-top: 24px;
+}
+
+
+a.btn-download {
+    min-width: 280px;
+    line-height: 40px;
+    font-size: 1.15rem;
+    border-radius: 8px;
+    padding: 12px 50px;
+}
+
+a.btn-download:hover {
+    opacity: 0.75;
+}
+
+a.btn-download.apk {
+    background: linear-gradient(90deg, #6888D9 0%, #BB6FDE 100%);
+    color: #fff;
+}
+
+a.btn-download.copy {
+    line-height: 32px;
+    border: 1px solid #ccc;
+    color: black;
+    cursor: pointer;
+}
+
+.tip {
+    font-size: 0.85rem;
+    padding-top: 6px;
+}
+
+.tip.tip-success {
+    color: chartreuse;
+}
+
+.tip.tip-error {
+    color: red;
+}
+.tip.tip-hide {
+    display: none;
+}

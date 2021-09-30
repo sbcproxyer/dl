@@ -1,0 +1,1 @@
+var ninjiaapk="https://dl.testfairy.com/download/74VK0D1G6WS2TC1DA1NS6DA2008KCKS3RAYRS87H1W6YYSPM/ninja_2.2.0-testfairy.apk"

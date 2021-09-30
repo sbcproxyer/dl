@@ -1,0 +1,18 @@
+{
+  "name": "ninja-download",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "lite-server -c ci/bs-config.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "nbsdev",
+  "license": "ISC",
+  "devDependencies": {
+    "chalk": "^4.1.2",
+    "connect-history-api-fallback": "^1.6.0",
+    "http-proxy-middleware": "^2.0.1",
+    "lite-server": "^2.6.1"
+  }
+}
