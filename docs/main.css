@@ -19,8 +19,8 @@ div.nj-root>div {
 }
 
 .nj-logo-wrap > img,.nj-logo-wrap > canvas {
-    width: 200px;
-    height: 200px;
+    width: 220px;
+    height: 220px;
     border-radius: 8px;
 }
 
@@ -90,7 +90,7 @@ div.wx-tip {
 }
 
 div.wx-tip > span {
-    margin-right: 10px;
+    margin-right: 6px;
 }
 
 div.wx-tip.hide {
