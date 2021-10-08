@@ -18,7 +18,7 @@ div.nj-root>div {
     padding-bottom: 24px;
 }
 
-.nj-logo-wrap > img {
+.nj-logo-wrap > img,.nj-logo-wrap > canvas {
     width: 200px;
     height: 200px;
     border-radius: 8px;
@@ -79,12 +79,18 @@ a.btn-download.copy {
 
 div.wx-tip {
     position: absolute;
-    top:0;
+    top:10px;
     left:0;
     padding: 4px 12px;
     text-align: center;
     width: 100vw;
     z-index: 999;
+    color: #cb3837;
+    font-size: 1.15rem;
+}
+
+div.wx-tip > span {
+    margin-right: 10px;
 }
 
 div.wx-tip.hide {

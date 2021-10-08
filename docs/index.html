@@ -12,6 +12,7 @@
     <script src="js/assets-var.js"></script>
     <script src="js/utils.js"></script>
     <script src="js/clipboard.min.js"></script>
+    <script src="js/qrcode.min.js"></script>
   </head>
   <body>
     <div id="root" class="nj-root">
@@ -20,7 +21,10 @@
                 欢迎使用忍者
             </h2>
         </div>
-        <div class="nj-logo-wrap"><img src="assets/images/logo.png" alt="Ninja"></div>
+        <div class="nj-logo-wrap">
+            <!-- <img src="assets/images/logo.png" alt="Ninja"> -->
+            <canvas id="qrCode"></canvas>
+        </div>
         <div class="nj-actions">
             
             <a  class="btn-download apk" id="ninjaApk" >下载安卓App</a>
@@ -29,7 +33,7 @@
         </div>
     </div>
     <div class="wx-tip hide" id="wxTip">
-        <span>当前在微信中无法下载,请使用浏览下打开</span>
+        <span>当前在微信中无法下载,请使用浏览器打开👆</span>
     </div>
   </body>
 
@@ -88,6 +92,12 @@ document.addEventListener('DOMContentLoaded',function(){
         }
 
     }
+
+    // draw Qrcode
+
+    drawQrcode()
 });
+
+
   </script>
 </html>
