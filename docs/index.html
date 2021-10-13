@@ -10,6 +10,7 @@
     />
     <link href="main.css" rel="stylesheet">
     <script src="js/assets-var.js"></script>
+    <script src="js/app.config.js"></script>
     <script src="js/utils.js"></script>
     <script src="js/clipboard.min.js"></script>
     <script src="js/qrcode.min.js"></script>
@@ -41,14 +42,12 @@
 document.addEventListener('DOMContentLoaded',function(){
 
     var isWxBs = isWx()
-    // console.log('>>>>>>>>>>>>>>3 seconds passed',ninjiaapk,isWxBs);
-
     if(isWxBs){
         var wxtipEl = document.querySelector('#wxTip')
         wxtipEl.className ='wx-tip'
     }
 
-    var url = ninjiaapk||'#'
+    var url = njconfig && njconfig.apkurl  ? njconfig.apkurl :'#'
     var apkBtnEl = document.querySelector('#ninjaApk')
     
     apkBtnEl.setAttribute('href',url)
@@ -60,7 +59,7 @@ document.addEventListener('DOMContentLoaded',function(){
     var clipboard = new ClipboardJS(cpyBtnEl);
 
     clipboard.on('success', function (e) {
-        console.log(e);
+        // console.log(e);
         setTip(1,'');
     });
 

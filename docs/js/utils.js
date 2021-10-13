@@ -11,7 +11,7 @@ function isWx(){
 // https://sbcproxyer.github.io/dl/
 
 function drawQrcode(cb){
-    var text = window.qrcontent || 'https://sbcproxyer.github.io/dl/';
+    var text = njconfig && njconfig.qrdltext ? njconfig.qrdltext : 'https://sbcproxyer.github.io/dl/';
     if(!QrCodeWithLogo){
        console.error('no QrCodeWithLogo.')
        return;
