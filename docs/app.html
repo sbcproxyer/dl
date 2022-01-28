@@ -104,8 +104,12 @@
         }
 
         // draw Qrcode
+        var qrtext =  njconfig.qrbase + njconfig.chatv3.qrpathname
+        drawQrcode(qrtext,qrcallback)
 
-        drawQrcode()
+        function qrcallback(result){
+            console.log(result)
+        }
     });
 
   </script>

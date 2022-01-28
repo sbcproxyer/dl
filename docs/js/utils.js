@@ -10,8 +10,9 @@ function isWx(){
 
 // https://sbcproxyer.github.io/dl/
 
-function drawQrcode(cb){
+function drawQrcode(url,cb){
     var text = njconfig && njconfig.qrdltext ? njconfig.qrdltext : 'https://sbcproxyer.github.io/dl/';
+    if(url) text = url;
     if(!QrCodeWithLogo){
        console.error('no QrCodeWithLogo.')
        return;
@@ -30,7 +31,7 @@ function drawQrcode(cb){
        }
     }).toCanvas().then(()=>{
        if(typeof cb === 'function'){
-          cb('success')
+          cb(text)
        }
     })
     
