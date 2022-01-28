@@ -18,7 +18,6 @@ function drawQrcode(url,cb){
        return;
     }
 
-
      new QrCodeWithLogo({
        canvas:document.querySelector('#qrCode'),
        content:text,
