@@ -97,7 +97,10 @@ document.addEventListener('DOMContentLoaded',function(){
 
     // draw Qrcode
 
-    drawQrcode()
+    drawQrcode(njconfig.qrbase,qrcallback)
+    function qrcallback(result){
+        console.log(result)
+    }
 });
 
 
