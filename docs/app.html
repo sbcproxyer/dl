@@ -104,7 +104,7 @@
         }
 
         // draw Qrcode
-        var qrtext =  njconfig.qrbase + njconfig.chatv3.qrpathname
+        var qrtext =  njconfig.chatv3.qrpathname || njconfig.qrbase
         drawQrcode(qrtext,qrcallback)
 
         function qrcallback(result){
